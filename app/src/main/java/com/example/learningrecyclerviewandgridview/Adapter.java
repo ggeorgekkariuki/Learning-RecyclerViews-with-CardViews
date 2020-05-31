@@ -55,6 +55,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             super(itemView);
             mTextView = itemView.findViewById(R.id.textView);
             mImageView = itemView.findViewById(R.id.image);
+            
+//             Set Click Listeners to the item views and return a toast
         }
     }
 }
