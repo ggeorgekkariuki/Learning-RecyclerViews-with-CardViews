@@ -20,10 +20,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     Context mContext;
 //    This Layout Inflater binds the custom_grid_layout for individual items
     LayoutInflater mLayoutInflater;
-    public Adapter(List<String> titles, List<Integer> images) {
+    public Adapter(Context context,List<String> titles, List<Integer> images) {
         this.titles = titles;
         this.images = images;
-        this.mLayoutInflater = LayoutInflater.from(mContext);
+        mLayoutInflater = LayoutInflater.from(context);
     }
 
     @NonNull

@@ -1,6 +1,7 @@
 package com.example.learningrecyclerviewandgridview;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -41,5 +42,17 @@ public class MainActivity extends AppCompatActivity {
         for (Integer i: id){
             images.add(i);
         }
+
+//        Create a New Adapter from its constructor
+        Adapter adapter = new Adapter(this, titles, images);
+
+//        A layout manager for the GridLayout
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
+
+//        Set the layout Manager to the RecyclerView
+        mRecyclerView.setLayoutManager(gridLayoutManager);
+
+//        Set the RecyclerView to the RecyclerView
+        mRecyclerView.setAdapter(adapter);
     }
 }
